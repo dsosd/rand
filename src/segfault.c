@@ -7,6 +7,9 @@ void crash_and_burn_recurv(int* frame_num){
 	char* str = "";
 	str[0] = '\x01';
 
+	//execute instruction we're not allowed to
+	__asm__("hlt");
+
 	//infinite recursion
 	int new_num = ++*frame_num;
 	crash_and_burn_recurv(&new_num);
