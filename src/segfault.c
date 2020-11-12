@@ -15,5 +15,4 @@ void crash_and_burn_recurv(int* frame_num){
 void crash_and_burn(void){
 	int init_frame_num = 0;
 	crash_and_burn_recurv(&init_frame_num);
-	exit(1);
 }
